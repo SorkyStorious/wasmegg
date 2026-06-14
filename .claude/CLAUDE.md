@@ -27,7 +27,7 @@ Monorepo using pnpm workspaces. Key workspace: wasmegg/ascension-planner
 
 ### Issue tracker
 
-Issues and PRDs live as GitHub issues (repo `SorkyStorious/wasmegg`), managed via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+Issues and PRDs live as GitHub issues (inferred from the `origin` remote), managed via the `gh` CLI. See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 
