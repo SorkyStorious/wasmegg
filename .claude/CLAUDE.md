@@ -22,3 +22,17 @@ Monorepo using pnpm workspaces. Key workspace: wasmegg/ascension-planner
 - Types: /src/types/actions.ts
 - Snapshot system: /src/lib/actions/snapshot.ts
 - Formatting: /src/lib/format.ts
+
+## Agent skills
+
+### Issue tracker
+
+Issues and PRDs live as GitHub issues (repo `SorkyStorious/wasmegg`), managed via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Five canonical triage roles mapped to default label strings (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Multi-context: root `CONTEXT.md` (shared Egg, Inc. game language) + `CONTEXT-MAP.md` indexing a per-tool `CONTEXT.md` for each significant tool. See `docs/agents/domain.md`.
