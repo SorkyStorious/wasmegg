@@ -361,7 +361,6 @@ export class Stone {
 
 const maxSoulFood = 140;
 const maxProphecyBonus = 5;
-const maxLabUpgrade = 10;
 const maxRCB = 540;
 
 export class Config {
@@ -373,7 +372,6 @@ export class Config {
   isVirtue: boolean;
   soulFood: number;
   prophecyBonus: number;
-  labUpgrade: number;
   RCB: number;
   birdFeedActive: boolean;
   tachyonPrismActive: boolean;
@@ -392,7 +390,6 @@ export class Config {
     this.isVirtue = false;
     this.soulFood = maxSoulFood;
     this.prophecyBonus = maxProphecyBonus;
-    this.labUpgrade = maxLabUpgrade;
     this.RCB = maxRCB;
     this.birdFeedActive = false;
     this.tachyonPrismActive = false;
@@ -426,7 +423,6 @@ export class Config {
     self.truthEggs = config?.truthEggs ?? 0;
     self.soulFood = maxSoulFood - (config?.missingSoulFood ?? 0);
     self.prophecyBonus = maxProphecyBonus - (config?.missingProphecyBonus ?? 0);
-    self.labUpgrade = maxLabUpgrade - (config?.missingLabUpgrade ?? 0);
     self.RCB = maxRCB;
     self.birdFeedActive = config?.birdFeedActive ?? false;
     self.tachyonPrismActive = config?.tachyonPrismActive ?? false;
@@ -448,7 +444,6 @@ export class Config {
       truthEggs: this.truthEggs,
       missingSoulFood: maxSoulFood - this.soulFood,
       missingProphecyBonus: maxProphecyBonus - this.prophecyBonus,
-      missingLabUpgrade: maxLabUpgrade - this.labUpgrade,
       birdFeedActive: this.birdFeedActive,
       tachyonPrismActive: this.tachyonPrismActive,
       soulBeaconActive: this.soulBeaconActive,
@@ -460,12 +455,7 @@ export class Config {
   }
 
   epicResearchMaxed(): boolean {
-    return (
-      this.soulFood === maxSoulFood &&
-      this.prophecyBonus === maxProphecyBonus &&
-      this.labUpgrade === maxLabUpgrade &&
-      this.RCB === maxRCB
-    );
+    return this.soulFood === maxSoulFood && this.prophecyBonus === maxProphecyBonus && this.RCB === maxRCB;
   }
 
   anyBoostActive(): boolean {
